@@ -142,6 +142,10 @@ on('change', customPercentInput, function() {
         if (!filledFields.includes('percent')){
             filledFields.push('percent');
         }
+        if (selectedTipButton){
+            selectedTipButton.style.removeProperty('background-color');
+            selectedTipButton.style.removeProperty('color');
+        }
     } else {
         // Show error info
         if (filledFields.includes('percent')){

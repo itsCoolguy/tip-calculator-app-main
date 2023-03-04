@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap" rel="stylesheet">
+    
+    <title>Frontend Mentor | Tip calculator app</title>
+  </head>
+  <body>
+
+    <div id="main-container">
+      <img src="./images/logo.svg" alt="logo" id="logo">
+      <div id="calculator-main">
+        <div id="left">
+          <div id="bill-input-label" class="input-label">
+            <label for="bill-input">Bill</label>
+            <p id="bill-input-error" class="input-label-error" hidden>Error Message</p>
+          </div>
+          <input type="text" id="bill-input" placeholder="0">
+          <p>Select Tip %</p>
+          <div id="tip-percent">
+            <button type="button" id="5-percent" class="percent-button">5%</button>
+            <button type="button" id="10-percent" class="percent-button">10%</button>
+            <button type="button" id="15-percent" class="percent-button">15%</button>
+            <button type="button" id="25-percent" class="percent-button">25%</button>
+            <button type="button" id="50-percent" class="percent-button">50%</button>
+            <input type="textbox" id="custom-percent" placeholder="Custom"></button>
+          </div>
+          <div id="people-input-label" class="input-label">
+            <label for="people-input">Number Of People</label>
+            <p id="people-input-error" class="input-label-error" hidden>Error Message</p>
+          </div>
+          <input type="text" id="people-input" placeholder="0">
+        </div>
+
+        <div id="answer-frame">
+          <div id="result-divs">
+            <div id="tip-amount-answer">
+              <div id="static-tip-answer">
+                <p>Tip Amount</p>
+                <h6>/ person</h6>
+              </div>
+              <h2>$0.00</h2>
+            </div>
+            <div id="total-amount-answer">
+              <div id="static-tip-answer">
+                <p>Total</p>
+                <h6>/ person</h6>
+              </div>
+              <h2>$0.00</h2>
+            </div>
+            <div id="final-amount-answer">
+              <div id="static-tip-answer">
+                <h3>Final bill</h3>
+              </div>
+              <h2>$0.00</h2>
+            </div>
+          </div>
+          <button type="button" id="reset-button" onclick="reset()" disabled>RESET</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="index.js"></script>
+  </body>
+</html>
